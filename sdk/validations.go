@@ -23,7 +23,7 @@ func validStringID(v *string) bool {
 	return v != nil && reStringID.MatchString(*v)
 }
 
-//notNil checks if the given input is present an non-empty..
+// notNil checks if the given input is present an non-empty..
 func notNil(v interface{}) bool {
 	return v != nil
 }

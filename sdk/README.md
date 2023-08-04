@@ -1,5 +1,5 @@
-Petstore Go Client
-==============================
+# Petstore Go Client
+
 This is an API client for [Petstore](https://github.com/scottwinkler/manning-code).
 
 ## Installation
@@ -7,17 +7,17 @@ This is an API client for [Petstore](https://github.com/scottwinkler/manning-cod
 Installation can be done with a normal `go get`:
 
 ```
-go get -u github.com/scottwinkler/go-petstore
+go get -u github.com/hieuvp/terraform-provider-petstore/sdk
 ```
 
 ## Documentation
 
-For complete usage of the API client, see the full [package docs](https://godoc.org/github.com/scottwinkler/go-petstore).
+For complete usage of the API client, see the full [package docs](https://godoc.org/github.com/hieuvp/terraform-provider-petstore/sdk).
 
 ## Usage
 
 ```go
-import sdk "github.com/scottwinkler/go-petstore"
+import sdk "github.com/hieuvp/terraform-provider-petstore/sdk"
 ```
 
 Construct a new Petstore client, then use the various endpoints on the client to
@@ -42,7 +42,7 @@ if err != nil {
 
 ## Examples
 
-The [examples](https://github.com/scottwinkler/go-petstore/tree/master/examples) directory
+The [examples](https://github.com/hieuvp/terraform-provider-petstore/sdk/tree/master/examples) directory
 contains a couple of examples. One of which is listed here as well:
 
 ```go
@@ -51,7 +51,7 @@ package main
 import (
 	"log"
 
-	sdk "github.com/scottwinkler/go-petstore"
+	sdk "github.com/hieuvp/terraform-provider-petstore/sdk"
 )
 
 func main() {

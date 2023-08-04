@@ -14,7 +14,6 @@ includes: []
 search: true
 highlight_theme: darkula
 headingLevel: 2
-
 ---
 
 <h1 id="swagger-petstore">Swagger Petstore v1.0.0</h1>
@@ -23,9 +22,9 @@ headingLevel: 2
 
 Base URLs:
 
-* <a href="https://g6pny6dke9.execute-api.us-west-2.amazonaws.com/v1/api">https://g6pny6dke9.execute-api.us-west-2.amazonaws.com/v1/api</a>
+- <a href="https://g6pny6dke9.execute-api.us-west-2.amazonaws.com/v1/api">https://g6pny6dke9.execute-api.us-west-2.amazonaws.com/v1/api</a>
 
- License: MIT
+License: MIT
 
 <h1 id="swagger-petstore-pets">pets</h1>
 
@@ -51,20 +50,18 @@ Accept: application/json
 
 ```javascript
 var headers = {
-  'Accept':'application/json'
-
+  Accept: "application/json",
 };
 
 $.ajax({
-  url: 'https://g6pny6dke9.execute-api.us-west-2.amazonaws.com/v1/api/pets',
-  method: 'get',
+  url: "https://g6pny6dke9.execute-api.us-west-2.amazonaws.com/v1/api/pets",
+  method: "get",
 
   headers: headers,
-  success: function(data) {
+  success: function (data) {
     console.log(JSON.stringify(data));
-  }
-})
-
+  },
+});
 ```
 
 ```javascript--nodejs
@@ -148,7 +145,7 @@ func main() {
 
     headers := map[string][]string{
         "Accept": []string{"application/json"},
-        
+
     }
 
     data := bytes.NewBuffer([]byte{jsonReq})
@@ -164,13 +161,13 @@ func main() {
 
 `GET /pets`
 
-*List all pets*
+_List all pets_
 
 <h3 id="listpets-parameters">Parameters</h3>
 
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|limit|query|integer(int32)|false|How many items to return at one time (default 100)|
+| Name  | In    | Type           | Required | Description                                        |
+| ----- | ----- | -------------- | -------- | -------------------------------------------------- |
+| limit | query | integer(int32) | false    | How many items to return at one time (default 100) |
 
 > Example responses
 
@@ -191,9 +188,9 @@ func main() {
 
 <h3 id="listpets-responses">Responses</h3>
 
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|An array of pets|[PetList](#schemapetlist)|
+| Status | Meaning                                                 | Description      | Schema                    |
+| ------ | ------------------------------------------------------- | ---------------- | ------------------------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | An array of pets | [PetList](#schemapetlist) |
 
 <aside class="success">
 This operation does not require authentication
@@ -223,21 +220,19 @@ Accept: application/json
 
 ```javascript
 var headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json'
-
+  "Content-Type": "application/json",
+  Accept: "application/json",
 };
 
 $.ajax({
-  url: 'https://g6pny6dke9.execute-api.us-west-2.amazonaws.com/v1/api/pets',
-  method: 'post',
+  url: "https://g6pny6dke9.execute-api.us-west-2.amazonaws.com/v1/api/pets",
+  method: "post",
 
   headers: headers,
-  success: function(data) {
+  success: function (data) {
     console.log(JSON.stringify(data));
-  }
-})
-
+  },
+});
 ```
 
 ```javascript--nodejs
@@ -329,7 +324,7 @@ func main() {
     headers := map[string][]string{
         "Content-Type": []string{"application/json"},
         "Accept": []string{"application/json"},
-        
+
     }
 
     data := bytes.NewBuffer([]byte{jsonReq})
@@ -345,7 +340,7 @@ func main() {
 
 `POST /pets`
 
-*Create a Pet*
+_Create a Pet_
 
 > Body parameter
 
@@ -359,9 +354,9 @@ func main() {
 
 <h3 id="createpet-parameters">Parameters</h3>
 
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|body|body|[CreatePetRequest](#schemacreatepetrequest)|true|none|
+| Name | In   | Type                                        | Required | Description |
+| ---- | ---- | ------------------------------------------- | -------- | ----------- |
+| body | body | [CreatePetRequest](#schemacreatepetrequest) | true     | none        |
 
 > Example responses
 
@@ -378,11 +373,11 @@ func main() {
 
 <h3 id="createpet-responses">Responses</h3>
 
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Expected response to a valid request|[Pet](#schemapet)|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|500|[Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1)|Internal Server Error|None|
+| Status | Meaning                                                                    | Description                          | Schema            |
+| ------ | -------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Expected response to a valid request | [Pet](#schemapet) |
+| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad Request                          | None              |
+| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Internal Server Error                | None              |
 
 <aside class="success">
 This operation does not require authentication
@@ -410,20 +405,18 @@ Accept: application/json
 
 ```javascript
 var headers = {
-  'Accept':'application/json'
-
+  Accept: "application/json",
 };
 
 $.ajax({
-  url: 'https://g6pny6dke9.execute-api.us-west-2.amazonaws.com/v1/api/pets/{petId}',
-  method: 'get',
+  url: "https://g6pny6dke9.execute-api.us-west-2.amazonaws.com/v1/api/pets/{petId}",
+  method: "get",
 
   headers: headers,
-  success: function(data) {
+  success: function (data) {
     console.log(JSON.stringify(data));
-  }
-})
-
+  },
+});
 ```
 
 ```javascript--nodejs
@@ -507,7 +500,7 @@ func main() {
 
     headers := map[string][]string{
         "Accept": []string{"application/json"},
-        
+
     }
 
     data := bytes.NewBuffer([]byte{jsonReq})
@@ -523,13 +516,13 @@ func main() {
 
 `GET /pets/{petId}`
 
-*Info for a specific pet*
+_Info for a specific pet_
 
 <h3 id="showpetbyid-parameters">Parameters</h3>
 
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|petId|path|string|true|The id of the pet to retrieve|
+| Name  | In   | Type   | Required | Description                   |
+| ----- | ---- | ------ | -------- | ----------------------------- |
+| petId | path | string | true     | The id of the pet to retrieve |
 
 > Example responses
 
@@ -546,10 +539,10 @@ func main() {
 
 <h3 id="showpetbyid-responses">Responses</h3>
 
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Expected response to a valid request|[Pet](#schemapet)|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not found|None|
+| Status | Meaning                                                        | Description                          | Schema            |
+| ------ | -------------------------------------------------------------- | ------------------------------------ | ----------------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)        | Expected response to a valid request | [Pet](#schemapet) |
+| 404    | [Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4) | Not found                            | None              |
 
 <aside class="success">
 This operation does not require authentication
@@ -574,16 +567,14 @@ Host: g6pny6dke9.execute-api.us-west-2.amazonaws.com
 ```
 
 ```javascript
-
 $.ajax({
-  url: 'https://g6pny6dke9.execute-api.us-west-2.amazonaws.com/v1/api/pets/{petId}',
-  method: 'delete',
+  url: "https://g6pny6dke9.execute-api.us-west-2.amazonaws.com/v1/api/pets/{petId}",
+  method: "delete",
 
-  success: function(data) {
+  success: function (data) {
     console.log(JSON.stringify(data));
-  }
-})
-
+  },
+});
 ```
 
 ```javascript--nodejs
@@ -665,20 +656,20 @@ func main() {
 
 `DELETE /pets/{petId}`
 
-*Delete a Pet*
+_Delete a Pet_
 
 <h3 id="deletepetbyid-parameters">Parameters</h3>
 
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|petId|path|string|true|The id of the pet to delete|
+| Name  | In   | Type   | Required | Description                 |
+| ----- | ---- | ------ | -------- | --------------------------- |
+| petId | path | string | true     | The id of the pet to delete |
 
 <h3 id="deletepetbyid-responses">Responses</h3>
 
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|ok|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not found|None|
+| Status | Meaning                                                        | Description | Schema |
+| ------ | -------------------------------------------------------------- | ----------- | ------ |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)        | ok          | None   |
+| 404    | [Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4) | Not found   | None   |
 
 <aside class="success">
 This operation does not require authentication
@@ -708,21 +699,19 @@ Accept: application/json
 
 ```javascript
 var headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json'
-
+  "Content-Type": "application/json",
+  Accept: "application/json",
 };
 
 $.ajax({
-  url: 'https://g6pny6dke9.execute-api.us-west-2.amazonaws.com/v1/api/pets/{petId}',
-  method: 'patch',
+  url: "https://g6pny6dke9.execute-api.us-west-2.amazonaws.com/v1/api/pets/{petId}",
+  method: "patch",
 
   headers: headers,
-  success: function(data) {
+  success: function (data) {
     console.log(JSON.stringify(data));
-  }
-})
-
+  },
+});
 ```
 
 ```javascript--nodejs
@@ -814,7 +803,7 @@ func main() {
     headers := map[string][]string{
         "Content-Type": []string{"application/json"},
         "Accept": []string{"application/json"},
-        
+
     }
 
     data := bytes.NewBuffer([]byte{jsonReq})
@@ -830,7 +819,7 @@ func main() {
 
 `PATCH /pets/{petId}`
 
-*Update a pet*
+_Update a pet_
 
 > Body parameter
 
@@ -844,10 +833,10 @@ func main() {
 
 <h3 id="patchpetbyid-parameters">Parameters</h3>
 
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|petId|path|string|true|The id of the pet to update|
-|body|body|[UpdatePetRequest](#schemaupdatepetrequest)|true|none|
+| Name  | In   | Type                                        | Required | Description                 |
+| ----- | ---- | ------------------------------------------- | -------- | --------------------------- |
+| petId | path | string                                      | true     | The id of the pet to update |
+| body  | body | [UpdatePetRequest](#schemaupdatepetrequest) | true     | none                        |
 
 > Example responses
 
@@ -864,12 +853,12 @@ func main() {
 
 <h3 id="patchpetbyid-responses">Responses</h3>
 
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Ok|[Pet](#schemapet)|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not found|None|
-|500|[Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1)|Internal Server Error|None|
+| Status | Meaning                                                                    | Description           | Schema            |
+| ------ | -------------------------------------------------------------------------- | --------------------- | ----------------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Ok                    | [Pet](#schemapet) |
+| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad Request           | None              |
+| 404    | [Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)             | Not found             | None              |
+| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Internal Server Error | None              |
 
 <aside class="success">
 This operation does not require authentication
@@ -888,17 +877,16 @@ This operation does not require authentication
   "species": "string",
   "age": 0
 }
-
 ```
 
 ### Properties
 
-|Name|Type|Required|Restrictions|Description|
-|---|---|---|---|---|
-|id|string|true|none|none|
-|name|string|true|none|none|
-|species|string|true|none|none|
-|age|integer|true|none|none|
+| Name    | Type    | Required | Restrictions | Description |
+| ------- | ------- | -------- | ------------ | ----------- |
+| id      | string  | true     | none         | none        |
+| name    | string  | true     | none         | none        |
+| species | string  | true     | none         | none        |
+| age     | integer | true     | none         | none        |
 
 <h2 id="tocSpetlist">PetList</h2>
 
@@ -915,14 +903,13 @@ This operation does not require authentication
     }
   ]
 }
-
 ```
 
 ### Properties
 
-|Name|Type|Required|Restrictions|Description|
-|---|---|---|---|---|
-|items|[[Pet](#schemapet)]|true|none|none|
+| Name  | Type                | Required | Restrictions | Description |
+| ----- | ------------------- | -------- | ------------ | ----------- |
+| items | [[Pet](#schemapet)] | true     | none         | none        |
 
 <h2 id="tocScreatepetrequest">CreatePetRequest</h2>
 
@@ -934,16 +921,15 @@ This operation does not require authentication
   "species": "string",
   "age": 0
 }
-
 ```
 
 ### Properties
 
-|Name|Type|Required|Restrictions|Description|
-|---|---|---|---|---|
-|name|string|true|none|none|
-|species|string|true|none|none|
-|age|integer|true|none|none|
+| Name    | Type    | Required | Restrictions | Description |
+| ------- | ------- | -------- | ------------ | ----------- |
+| name    | string  | true     | none         | none        |
+| species | string  | true     | none         | none        |
+| age     | integer | true     | none         | none        |
 
 <h2 id="tocSupdatepetrequest">UpdatePetRequest</h2>
 
@@ -955,14 +941,12 @@ This operation does not require authentication
   "species": "string",
   "age": 0
 }
-
 ```
 
 ### Properties
 
-|Name|Type|Required|Restrictions|Description|
-|---|---|---|---|---|
-|name|string|true|none|none|
-|species|string|true|none|none|
-|age|integer|true|none|none|
-
+| Name    | Type    | Required | Restrictions | Description |
+| ------- | ------- | -------- | ------------ | ----------- |
+| name    | string  | true     | none         | none        |
+| species | string  | true     | none         | none        |
+| age     | integer | true     | none         | none        |

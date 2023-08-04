@@ -1,4 +1,3 @@
-
 package petstore
 
 // Bool returns a pointer to the given bool

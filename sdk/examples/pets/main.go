@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"github.com/davecgh/go-spew/spew"
-	sdk "github.com/scottwinkler/go-petstore"
+	sdk "github.com/hieuvp/terraform-provider-petstore/sdk"
 )
 
 func main() {
