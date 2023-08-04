@@ -42,7 +42,7 @@ if err != nil {
 
 ## Examples
 
-The [examples](https://github.com/hieuvp/terraform-provider-petstore/sdk/tree/master/examples) directory
+The [examples](https://github.com/hieuvp/terraform-provider-petstore/tree/main/sdk/examples) directory
 contains a couple of examples. One of which is listed here as well:
 
 ```go

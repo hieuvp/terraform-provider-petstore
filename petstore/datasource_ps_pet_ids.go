@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	sdk "github.com/terraform-in-action/go-petstore"
+	sdk "github.com/hieuvp/terraform-provider-petstore/sdk"
 )
 
 func dataSourcePSPetIDs() *schema.Resource {
