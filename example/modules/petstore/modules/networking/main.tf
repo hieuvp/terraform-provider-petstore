@@ -1,17 +1,14 @@
 data "aws_availability_zones" "available" {}
 
-resource "aws_default_vpc" "default" {
-}
-
 module "lambda_sg" {
   source        = "../../../petstore.networking.lambda_sg"
-  vpc_id        = aws_default_vpc.default.id
+  vpc_id        = var.vpc_id
   ingress_rules = []
 }
 
 module "db_sg" {
   source = "../../../petstore.networking.db_sg"
-  vpc_id = aws_default_vpc.default.id
+  vpc_id = var.vpc_id
   ingress_rules = [
     {
       protocol        = "tcp"

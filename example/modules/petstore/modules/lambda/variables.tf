@@ -2,6 +2,10 @@ variable "namespace" {
   type = string
 }
 
+variable "subnet_ids" {
+  description = "List of IDs of subnets"
+}
+
 variable "rds_user" {
   type = string
 }

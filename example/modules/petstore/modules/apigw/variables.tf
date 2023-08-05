@@ -5,4 +5,3 @@ variable "namespace" {
 variable "lambda_arn" {
   type = string
 }
-

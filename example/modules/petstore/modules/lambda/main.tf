@@ -42,20 +42,6 @@ resource "aws_iam_policy_attachment" "lambda_iam_policy_role_attachment" {
   policy_arn = aws_iam_policy.lambda_iam_policy.arn
 }
 
-data "aws_region" "current" {}
-
-resource "aws_default_subnet" "default_az1" {
-  availability_zone = "${data.aws_region.current.name}a"
-}
-
-resource "aws_default_subnet" "default_az2" {
-  availability_zone = "${data.aws_region.current.name}b"
-}
-
-resource "aws_default_subnet" "default_az3" {
-  availability_zone = "${data.aws_region.current.name}c"
-}
-
 #lambda function
 resource "aws_lambda_function" "lambda_function" {
   filename                       = "${path.module}/../../dist/function.zip"
@@ -78,8 +64,7 @@ resource "aws_lambda_function" "lambda_function" {
   }
 
   vpc_config {
-    subnet_ids         = [aws_default_subnet.default_az1.id, aws_default_subnet.default_az2.id, aws_default_subnet.default_az3.id]
+    subnet_ids         = var.subnet_ids
     security_group_ids = [var.sg.lambda]
   }
 }
-
