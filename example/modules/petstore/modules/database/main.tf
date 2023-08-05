@@ -3,8 +3,8 @@ data "aws_region" "current" {}
 resource "aws_rds_cluster" "rds_cluster" {
   cluster_identifier      = "${var.namespace}-aurora-cluster"
   engine                  = "aurora-mysql"
-  availability_zones      = var.azs
-  db_subnet_group_name    = var.subnet_group_name
+  availability_zones      = var.rds_azs
+  db_subnet_group_name    = var.rds_subnet_group_name
   database_name           = "petstore"
   master_username         = var.rds_user
   master_password         = var.rds_password

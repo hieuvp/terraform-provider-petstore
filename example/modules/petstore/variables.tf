@@ -8,12 +8,11 @@ variable "vpc_id" {
 }
 
 variable "lambda_subnet_ids" {
-  description = "List of subnet IDs of AWS Lambda"
+  description = "List of subnet IDs of the Lambda"
 }
 
 variable "rds_azs" {
-  # A list of availability zones names or ids in the region
-  description = "List of subnet IDs of Amazon Relational Database Service (RDS)"
+  description = "List of availability zones of the Relational Database Service (RDS)"
 }
 
 variable "rds_subnet_group_name" {
@@ -29,4 +28,3 @@ variable "rds_password" {
   type    = string
   default = "password"
 }
-

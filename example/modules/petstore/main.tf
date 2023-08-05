@@ -15,13 +15,13 @@ module "networking" {
 }
 
 module "database" {
-  source            = "./modules/database"
-  namespace         = local.namespace
-  azs               = var.rds_azs
-  subnet_group_name = var.rds_subnet_group_name
-  rds_user          = var.rds_user
-  rds_password      = var.rds_password
-  sg                = module.networking.sg
+  source                = "./modules/database"
+  namespace             = local.namespace
+  rds_azs               = var.rds_azs
+  rds_subnet_group_name = var.rds_subnet_group_name
+  rds_user              = var.rds_user
+  rds_password          = var.rds_password
+  sg                    = module.networking.sg
 }
 
 module "lambda" {
