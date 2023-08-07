@@ -1,3 +1,7 @@
+variable "account_id" {
+  description = "Your AWS account ID to setup the environment"
+}
+
 variable "region" {
   description = "The region to host the Petstore API in"
   default     = "us-east-1"
