@@ -5,6 +5,6 @@ provider "github.com/hieuvp/petstore" {
   version     = "1.0.0"
   constraints = "~> 1.0.0"
   hashes = [
-    "h1:kIky80cWJbWzYziBHdTj6ctYnqwZlUT40uMz2JoMKyo=",
+    "h1:oC1CgBGibbBwZLH3m11xgXEKUCf8jGdx9rZlHlIYnng=",
   ]
 }

@@ -25,4 +25,6 @@ build:
 
 .PHONY: test
 test:
-	cd petstore && TF_ACC=1 go test ./... -v
+	export PETSTORE_ADDRESS=$$(cd example/api && terraform output -raw address) && \
+	cd petstore && \
+	TF_ACC=1 go test ./... -v
